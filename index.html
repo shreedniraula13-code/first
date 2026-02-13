@@ -35,6 +35,7 @@
             padding: 20px;
             width: 90%;
             max-width: 400px;
+            z-index: 2;
         }
 
         h1 {
@@ -64,7 +65,7 @@
             border-radius: 50px;
             cursor: pointer;
             transition: 0.3s ease;
-            min-width: 100px;
+            min-width: 120px;
         }
 
         .yes {
@@ -107,6 +108,39 @@
                 gap: 15px;
             }
         }
+
+        .copyright {
+.copyright {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: clamp(18px, 3vw, 28px);
+    font-weight: bold;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #00ffcc, #ff00ff, #ffff00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glowPulse 2s infinite alternate;
+    text-shadow: 0 0 10px rgba(255,255,255,0.6);
+}
+
+@keyframes glowPulse {
+    from {
+        transform: scale(1);
+        text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff;
+    }
+    to {
+        transform: scale(1.05);
+        text-shadow: 0 0 20px #00ffff, 0 0 40px #ff00ff;
+    }
+}
+
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 0.8; transform: translateY(0); }
+        }
     </style>
 </head>
 
@@ -119,6 +153,10 @@
             <button class="btn yes" onclick="showLove()">Yes 💖</button>
             <button class="btn no" id="noBtn">No 😢</button>
         </div>
+    </div>
+
+    <div class="copyright">
+        © 2026 Made by Shreed Niraula aka whitedevil
     </div>
 
     <script>
